@@ -1,0 +1,29 @@
+% default: box sidebar. For full page sidebar, include the argument 'fullpagesb'
+\documentclass[10pt, letterpaper]{cvsidebar}
+
+% smaller margins
+\geometry{left=0.35in, right=0.35in}
+
+\usepackage[defaultsans]{lato} % nicer sans serif fonts
+
+\renewcommand{\cvsidebarfontsize}{\fontsize{9}{11}\selectfont} %sb font size
+
+\begin{document}
+
+\begin{cvfirstpage}
+  \begin{cvsidebar}
+    \input{sidebar.tex}
+  \end{cvsidebar}\hfill%
+  \begin{cvmain}
+    \input{profile.tex}
+    \input{experience.tex}
+    \input{workx.tex}
+  \end{cvmain}
+\end{cvfirstpage}
+
+% From here on: full width, any number of pages
+%\newpage %force begin clean second page
+%\input{publications.tex}
+%\input{presentations.tex}
+
+\end{document}
